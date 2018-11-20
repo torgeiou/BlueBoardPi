@@ -1,6 +1,8 @@
 import RPi.GPIO as GPIO
 import time
 import sys
+
+
 from hx711 import HX711
 
 def cleanAndExit():
@@ -46,6 +48,9 @@ while True:
 
         hx.power_down()
         hx.power_up()
-        time.sleep(0.5)
+        time.sleep(0.1)
+
+
+
     except (KeyboardInterrupt, SystemExit):
         cleanAndExit()
